@@ -4,7 +4,7 @@ import uniqueRandomArray from "unique-random-array";
 
 var getRandomName = uniqueRandomArray(randomNames);
 
-module.exports = {
+export default {
     all: randomNames,
     random: function (number) {
         if (number === undefined) {
