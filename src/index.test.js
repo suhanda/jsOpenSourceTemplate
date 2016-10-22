@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var randomNames = require('./index');
+import {expect} from "chai";
+import randomNames from './index';
 
 
 describe('random name', function () {
@@ -18,7 +18,6 @@ describe('random name', function () {
         it('should contain `Suhanda`', function () {
             expect(randomNames.all).to.be.include('Suhanda');
         });
-
 
     });
 

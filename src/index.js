@@ -1,14 +1,16 @@
-var randomName = require('./random-name.json');
-var uniqueRandomArray = require('unique-random-array');
-var getRandomName = uniqueRandomArray(randomName);
+import randomNames from "./random-name.json";
+import uniqueRandomArray from "unique-random-array";
+
+
+var getRandomName = uniqueRandomArray(randomNames);
 
 module.exports = {
-    all: randomName,
+    all: randomNames,
     random: function (number) {
         if (number === undefined) {
             return getRandomName();
         }
-        var randomItems = [];
+        let randomItems = [];
         for (var i = 0; i < number; i++) {
             randomItems.push(getRandomName());
         }
